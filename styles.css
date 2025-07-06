@@ -1,0 +1,270 @@
+@import url('https://fonts.googleapis.com/css2?family=Marck+Script&display=swap&subset=cyrillic');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', Arial, sans-serif;
+  background: #f9f6f4;
+  color: #4b2e2b;
+  font-size: 1rem;
+}
+
+.watercolor-header {
+  background: radial-gradient(circle at 50% 30%, #b97a8c 60%, #f9f6f4 100%);
+  text-align: center;
+  padding: 2rem 0.5rem 1.5rem 0.5rem;
+  color: #fff;
+  position: relative;
+}
+
+.watercolor-header h1 {
+  font-family: 'Marck Script', cursive;
+  font-size: 2.1rem;
+  margin: 0 0 0.5rem 0;
+  letter-spacing: 0.05em;
+  word-break: break-word;
+}
+
+.watercolor-header .date,
+.watercolor-header .time,
+.watercolor-header .venue {
+  font-size: 1rem;
+  margin: 0.2rem 0;
+  color: #fbeee6;
+}
+
+section {
+  margin: 1.2rem auto;
+  max-width: 98vw;
+  padding: 0.7rem;
+  background: rgba(255,255,255,0.7);
+  border-radius: 1rem;
+  box-shadow: 0 2px 8px rgba(185,122,140,0.05);
+}
+
+.countdown-section {
+  text-align: center;
+  margin: 1.2rem auto;
+  max-width: 98vw;
+  background: none;
+  box-shadow: none;
+  padding: 0;
+}
+
+#countdown {
+  display: flex;
+  justify-content: center;
+  gap: 0.7rem;
+  background: none;
+  box-shadow: none;
+  padding: 0;
+  flex-wrap: wrap;
+}
+
+.countdown-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(249, 230, 236, 0.7);
+  border-radius: 1.2rem;
+  min-width: 60px;
+  padding: 0.7rem 0.4rem 0.4rem 0.4rem;
+  box-shadow: 0 2px 8px rgba(185,122,140,0.08);
+  margin-bottom: 0.5rem;
+}
+
+.countdown-number {
+  font-family: 'Marck Script', cursive;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #b97a8c;
+  line-height: 1;
+}
+
+.countdown-label {
+  font-size: 0.9rem;
+  color: #a88a8a;
+  margin-top: 0.2rem;
+  letter-spacing: 0.02em;
+}
+
+.timeline-section {
+  margin: 1.2rem auto;
+  max-width: 98vw;
+  background: none;
+  box-shadow: none;
+  padding: 0 0 1.2rem 0;
+  overflow-x: auto;
+}
+
+.timeline {
+  position: relative;
+  margin: 0 auto;
+  padding: 1.2rem 0 0.5rem 0;
+  width: 100%;
+  min-width: 320px;
+  max-width: 500px;
+}
+
+.timeline-event {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2.2rem;
+  position: relative;
+  min-width: 0;
+}
+
+.timeline-time {
+  flex: 0 0 80px;
+  text-align: right;
+  font-size: 1.5rem;
+  color: #b97a8c;
+  font-weight: 400;
+  font-family: 'Marck Script', cursive;
+  margin-right: 1.5rem;
+  margin-bottom: 0;
+  letter-spacing: 0.02em;
+}
+
+.timeline-dot {
+  width: 18px;
+  height: 18px;
+  background: #b97a8c;
+  border-radius: 50%;
+  border: 4px solid #f9f6f4;
+  box-shadow: 0 0 0 3px #e7c6d1;
+  z-index: 1;
+  position: relative;
+  margin: 0;
+}
+
+.timeline-dot::before,
+.timeline-dot::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  width: 3px;
+  background: #e7c6d1;
+  transform: translateX(-50%);
+  z-index: 0;
+}
+
+.timeline-dot::before {
+  top: -2.5rem;
+  height: 2.5rem;
+}
+
+.timeline-dot::after {
+  bottom: -2.5rem;
+  height: 2.5rem;
+}
+
+.timeline-event:first-child .timeline-dot::before {
+  display: none;
+}
+
+.timeline-event:last-child .timeline-dot::after {
+  display: none;
+}
+
+.timeline-desc {
+  flex: 0 0 180px;
+  text-align: left;
+  font-size: 1rem;
+  color: #4b2e2b;
+  margin-left: 1.5rem;
+  margin-top: 0;
+  font-weight: 400;
+  font-family: 'Montserrat', Arial, sans-serif;
+  letter-spacing: 0.01em;
+}
+
+.map-section {
+  text-align: center;
+}
+
+.invitation-section {
+  text-align: center;
+  margin: 1.5rem auto;
+  background: none;
+  box-shadow: none;
+}
+
+.invitation-text {
+  font-size: 1.3rem;
+  color: #b97a8c;
+  font-family: 'Marck Script', cursive;
+  margin: 0.5rem 0 0.5rem 0;
+  letter-spacing: 0.03em;
+}
+
+/* Larger screens */
+@media (min-width: 600px) {
+  .watercolor-header h1 {
+    font-size: 3rem;
+  }
+  .watercolor-header .date,
+  .watercolor-header .time,
+  .watercolor-header .venue {
+    font-size: 1.2rem;
+  }
+  section {
+    max-width: 600px;
+    padding: 1rem;
+  }
+  .countdown-section {
+    max-width: 600px;
+  }
+  #countdown {
+    gap: 2rem;
+  }
+  .countdown-block {
+    min-width: 80px;
+    padding: 1rem 0.7rem 0.7rem 0.7rem;
+  }
+  .countdown-number {
+    font-size: 2.5rem;
+  }
+  .timeline-section {
+    max-width: 500px;
+    padding: 0 0 2rem 0;
+  }
+  .timeline {
+    padding: 2rem 0 1rem 0;
+  }
+  .timeline-event {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 3.5rem;
+  }
+  .timeline-time {
+    flex: 0 0 80px;
+    text-align: right;
+    font-size: 2rem;
+    margin-right: 1.5rem;
+    margin-bottom: 0;
+  }
+  .timeline-dot {
+    margin: 0;
+  }
+  .timeline-desc {
+    flex: 0 0 180px;
+    text-align: left;
+    font-size: 1.1rem;
+    margin-left: 1.5rem;
+    margin-top: 0;
+  }
+  .timeline-dot::before {
+    top: -2.5rem;
+    height: 2.5rem;
+  }
+  .timeline-dot::after {
+    bottom: -2.5rem;
+    height: 2.5rem;
+  }
+}

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Свадебное приглашение — Стас и Алина</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="watercolor-header">
+    <h1>Стас & Алина</h1>
+    <p class="date">2 сентября 2025</p>
+    <p class="time">17:30</p>
+    <p class="venue">Кафе Оттепель на ВДНХ</p>
+  </header>
+  <section class="invitation-section">
+    <p class="invitation-text">Мы будем рады видеть вас на нашей свадьбе</p>
+  </section>
+  <section class="countdown-section">
+    <h2>До свадьбы осталось:</h2>
+    <div id="countdown">
+      <span class="countdown-block">
+        <span class="countdown-number" id="days">00</span>
+        <span class="countdown-label">дней</span>
+      </span>
+      <span class="countdown-block">
+        <span class="countdown-number" id="hours">00</span>
+        <span class="countdown-label">часов</span>
+      </span>
+      <span class="countdown-block">
+        <span class="countdown-number" id="minutes">00</span>
+        <span class="countdown-label">минут</span>
+      </span>
+      <span class="countdown-block">
+        <span class="countdown-number" id="seconds">00</span>
+        <span class="countdown-label">секунд</span>
+      </span>
+    </div>
+  </section>
+  <section class="timeline-section">
+    <div class="timeline">
+      <div class="timeline-event">
+        <div class="timeline-time">17:30</div>
+        <div class="timeline-dot"></div>
+        <div class="timeline-desc">сбор гостей</div>
+      </div>
+      <div class="timeline-event">
+        <div class="timeline-time">18:00</div>
+        <div class="timeline-dot"></div>
+        <div class="timeline-desc">начало празднования</div>
+      </div>
+      <div class="timeline-event">
+        <div class="timeline-time">23:00</div>
+        <div class="timeline-dot"></div>
+        <div class="timeline-desc">окончание празднования</div>
+      </div>
+    </div>
+  </section>
+  <section class="map-section">
+    <h2>Как добраться</h2>
+    <div id="yandex-map">
+        <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A186d749feb9ac3bb75db255f062fc6a41e191238424505eb4736e8b7d7e19d78&amp;width=100%25&amp;height=500&amp;lang=ru_RU&amp;scroll=true"></script>
+    </div>
+  </section>
+
+  <script>
+    // Countdown timer to 2 September 2025, 17:30
+    function pad(num) {
+      return num.toString().padStart(2, '0');
+    }
+    function updateCountdown() {
+      const eventDate = new Date('2025-09-02T17:30:00+03:00');
+      const now = new Date();
+      const diff = eventDate - now;
+      if (diff <= 0) {
+        document.getElementById('countdown').textContent = 'Событие уже началось!';
+        return;
+      }
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+      const minutes = Math.floor((diff / (1000 * 60)) % 60);
+      const seconds = Math.floor((diff / 1000) % 60);
+      document.getElementById('days').textContent = pad(days);
+      document.getElementById('hours').textContent = pad(hours);
+      document.getElementById('minutes').textContent = pad(minutes);
+      document.getElementById('seconds').textContent = pad(seconds);
+    }
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+  </script>
+</body>
+</html> 
