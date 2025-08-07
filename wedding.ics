@@ -1,0 +1,13 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Your Wedding Invitation//EN
+BEGIN:VEVENT
+UID:stas-alina-wedding-2025@yourdomain.com
+DTSTAMP:20240902T143000Z
+DTSTART:20250902T143000Z
+DTEND:20250902T210000Z
+SUMMARY:Свадьба Стаса и Алины
+DESCRIPTION:Кафе Оттепель на ВДНХ\nhttps://yandex.ru/maps/-/CHDQ4HYp
+LOCATION:Кафе Оттепель на ВДНХ\nhttps://yandex.ru/maps/-/CHDQ4HYp
+END:VEVENT
+END:VCALENDAR 

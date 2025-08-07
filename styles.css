@@ -1,18 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Marck+Script&display=swap&subset=cyrillic');
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bad+Script&display=swap');
 
 body {
-  margin: 0;
-  padding: 0;
+  background-color: #EAF2F8;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.85), rgba(255,255,255,0.85)),
+    url('pattern.jpg');
+  background-repeat: repeat;
+  background-size: 400px 400px;
+  background-attachment: fixed;
   font-family: 'Montserrat', Arial, sans-serif;
-  background: #f9f6f4;
-  color: #4b2e2b;
+  color: #22334A;
   font-size: 1rem;
 }
 
 .watercolor-header {
-  background: radial-gradient(circle at 50% 30%, #b97a8c 60%, #f9f6f4 100%);
+  /* background: linear-gradient(to bottom, #4A6C8A 0%, #7CA3C7 60%, #D6E6F2 100%); */
+  background: linear-gradient(to bottom, #4A6C8A 0%, #7CA3C7 70%, #95b6d1 100%);
   text-align: center;
   padding: 2rem 0.5rem 1.5rem 0.5rem;
   color: #fff;
@@ -20,11 +28,13 @@ body {
 }
 
 .watercolor-header h1 {
-  font-family: 'Marck Script', cursive;
-  font-size: 2.1rem;
+  font-family: 'Bad Script', cursive;
+  font-size: 3.5rem;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  color: #fff;
   margin: 0 0 0.5rem 0;
-  letter-spacing: 0.05em;
-  word-break: break-word;
+  text-shadow: 0 2px 8px rgba(76, 108, 138, 0.10);
 }
 
 .watercolor-header .date,
@@ -32,21 +42,68 @@ body {
 .watercolor-header .venue {
   font-size: 1rem;
   margin: 0.2rem 0;
-  color: #fbeee6;
+  color: #eaf2f8;
 }
 
 section {
-  margin: 1.2rem auto;
+  margin: 2.5rem auto;
   max-width: 98vw;
   padding: 0.7rem;
-  background: rgba(255,255,255,0.7);
+  background: #F4F8FBCC;
   border-radius: 1rem;
-  box-shadow: 0 2px 8px rgba(185,122,140,0.05);
+  box-shadow: 0 2px 8px rgba(76, 108, 138, 0.08);
+  color: #22334A;
+}
+
+.invitation-section {
+  text-align: center;
+  background: none;
+  box-shadow: none;
+}
+
+.invitation-img {
+  display: block;
+  margin: 0 auto 1.2rem auto;
+  max-width: 340px;
+  width: 100%;
+  height: auto;
+  border-radius: 1.2rem;
+  box-shadow: 0 2px 12px rgba(76, 108, 138, 0.10);
+}
+
+.invitation-greeting {
+  font-size: 1.2rem;
+  color: #4A6C8A;
+  font-family: 'Marck Script', cursive;
+  margin: 0.5rem 0 0.2rem 0;
+  letter-spacing: 0.02em;
+}
+
+.invitation-message {
+  font-size: 1.05rem;
+  color: #22334A;
+  font-family: 'Montserrat', Arial, sans-serif;
+  margin: 0.2rem 0 0.7rem 0;
+  letter-spacing: 0.01em;
+  text-align: center;
+  line-height: 1.6;
+  background: #F4F8FBCC;
+  border-radius: 1rem;
+  box-shadow: 0 2px 8px rgba(76, 108, 138, 0.08);
+  padding: 1.2rem 1rem;
+  display: inline-block;
+}
+
+.invitation-text {
+  font-size: 1.3rem;
+  color: #4A6C8A;
+  font-family: 'Marck Script', cursive;
+  margin: 0.5rem 0 0.5rem 0;
+  letter-spacing: 0.03em;
 }
 
 .countdown-section {
   text-align: center;
-  margin: 1.2rem auto;
   max-width: 98vw;
   background: none;
   box-shadow: none;
@@ -67,11 +124,11 @@ section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: rgba(249, 230, 236, 0.7);
+  background: #EAF2F8;
   border-radius: 1.2rem;
   min-width: 60px;
   padding: 0.7rem 0.4rem 0.4rem 0.4rem;
-  box-shadow: 0 2px 8px rgba(185,122,140,0.08);
+  box-shadow: 0 2px 8px rgba(76, 108, 138, 0.08);
   margin-bottom: 0.5rem;
 }
 
@@ -79,19 +136,18 @@ section {
   font-family: 'Marck Script', cursive;
   font-size: 1.5rem;
   font-weight: bold;
-  color: #b97a8c;
+  color: #4A6C8A;
   line-height: 1;
 }
 
 .countdown-label {
   font-size: 0.9rem;
-  color: #a88a8a;
+  color: #7CA3C7;
   margin-top: 0.2rem;
   letter-spacing: 0.02em;
 }
 
 .timeline-section {
-  margin: 1.2rem auto;
   max-width: 98vw;
   background: none;
   box-shadow: none;
@@ -106,6 +162,9 @@ section {
   width: 100%;
   min-width: 320px;
   max-width: 500px;
+  background: #F4F8FBCC;
+  border-radius: 1rem;
+  box-shadow: 0 2px 8px rgba(76, 108, 138, 0.08);
 }
 
 .timeline-event {
@@ -116,13 +175,17 @@ section {
   margin-bottom: 2.2rem;
   position: relative;
   min-width: 0;
+  /* Remove card background from timeline-event */
+  background: none;
+  border-radius: 0;
+  box-shadow: none;
 }
 
 .timeline-time {
   flex: 0 0 80px;
   text-align: right;
   font-size: 1.5rem;
-  color: #b97a8c;
+  color: #4A6C8A;
   font-weight: 400;
   font-family: 'Marck Script', cursive;
   margin-right: 1.5rem;
@@ -133,10 +196,10 @@ section {
 .timeline-dot {
   width: 18px;
   height: 18px;
-  background: #b97a8c;
+  background: #7CA3C7;
   border-radius: 50%;
-  border: 4px solid #f9f6f4;
-  box-shadow: 0 0 0 3px #e7c6d1;
+  border: 4px solid #F4F8FB;
+  box-shadow: 0 0 0 3px #EAF2F8;
   z-index: 1;
   position: relative;
   margin: 0;
@@ -148,7 +211,7 @@ section {
   position: absolute;
   left: 50%;
   width: 3px;
-  background: #e7c6d1;
+  background: #7CA3C7;
   transform: translateX(-50%);
   z-index: 0;
 }
@@ -175,7 +238,7 @@ section {
   flex: 0 0 180px;
   text-align: left;
   font-size: 1rem;
-  color: #4b2e2b;
+  color: #22334A;
   margin-left: 1.5rem;
   margin-top: 0;
   font-weight: 400;
@@ -183,38 +246,84 @@ section {
   letter-spacing: 0.01em;
 }
 
-.map-section {
+.surprise-section {
   text-align: center;
-}
-
-.invitation-section {
-  text-align: center;
-  margin: 1.5rem auto;
   background: none;
   box-shadow: none;
 }
 
-.invitation-text {
-  font-size: 1.3rem;
-  color: #b97a8c;
-  font-family: 'Marck Script', cursive;
+.surprise-text {
+  font-size: 1.1rem;
+  color: #22334A;
+  font-family: 'Montserrat', Arial, sans-serif;
   margin: 0.5rem 0 0.5rem 0;
-  letter-spacing: 0.03em;
+  letter-spacing: 0.01em;
+  line-height: 1.5;
+  background: #F4F8FBCC;
+  border-radius: 1rem;
+  box-shadow: 0 2px 8px rgba(76, 108, 138, 0.08);
+  padding: 1.2rem 1rem;
+  display: inline-block;
 }
 
-/* Larger screens */
+.map-section {
+  text-align: center;
+}
+
+.calendar-links {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 1.2rem 0 0.5rem 0;
+}
+
+.calendar-link {
+  display: inline-block;
+  padding: 0.7rem 1.2rem;
+  border-radius: 0.8rem;
+  font-size: 1rem;
+  font-family: 'Montserrat', Arial, sans-serif;
+  text-decoration: none;
+  color: #fff;
+  background: #4A6C8A;
+  box-shadow: 0 2px 8px rgba(76, 108, 138, 0.08);
+  transition: background 0.2s, color 0.2s;
+}
+
+.calendar-link:hover {
+  background: #22334A;
+  color: #fff;
+}
+
+.google-calendar {
+  background: #4A6C8A;
+}
+
+.google-calendar:hover {
+  background: #22334A;
+}
+
+.ics-calendar {
+  background: #4A6C8A;
+}
+
+.ics-calendar:hover {
+  background: #22334A;
+}
+
+.header-icon {
+  display: block;
+  margin: 1.2rem auto -2.8rem auto;
+  max-width: 165px;
+  width: 100%;
+  height: auto;
+}
+
 @media (min-width: 600px) {
-  .watercolor-header h1 {
-    font-size: 3rem;
-  }
-  .watercolor-header .date,
-  .watercolor-header .time,
-  .watercolor-header .venue {
-    font-size: 1.2rem;
-  }
   section {
     max-width: 600px;
     padding: 1rem;
+    margin: 3.5rem auto;
   }
   .countdown-section {
     max-width: 600px;
