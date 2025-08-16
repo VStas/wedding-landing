@@ -43,7 +43,7 @@ body {
 }
 
 section {
-  margin: 2.5rem auto;
+  margin: 3rem auto;
   max-width: 95vw;
   padding: 0.7rem;
   background: rgba(246, 203, 161, 0.15);
@@ -106,6 +106,7 @@ section {
   background: none;
   box-shadow: none;
   padding: 0;
+  margin: 3rem auto;
 }
 
 #countdown {
@@ -151,6 +152,7 @@ section {
   box-shadow: none;
   padding: 0 0 1.2rem 0;
   overflow-x: auto;
+  margin: 3rem auto;
 }
 
 .timeline {
@@ -249,13 +251,15 @@ section {
   text-align: center;
   background: none;
   box-shadow: none;
+  margin: 3.5rem auto;
+  padding: 0;
 }
 
 .surprise-text {
   font-size: 1.1rem;
   color: #22334A;
   font-family: 'Montserrat', Arial, sans-serif;
-  margin: 0.5rem 0 0.5rem 0;
+  margin: 0;
   letter-spacing: 0.01em;
   line-height: 2.5;
   background: rgba(246, 203, 161, 0.15);
@@ -263,6 +267,10 @@ section {
   box-shadow: 0 4px 12px rgba(139, 69, 19, 0.08);
   padding: 1.2rem 1rem;
   display: inline-block;
+}
+
+.surprise-section p {
+  margin: 0;
 }
 
 .map-section {
@@ -373,7 +381,7 @@ section {
 
 .section-img {
   display: block;
-  margin: 2.5rem auto 2.5rem auto;
+  margin: 3rem auto;
   max-width: 632px;
   width: 100%;
   height: auto;
@@ -383,6 +391,15 @@ section {
 
 .section-title {
   font-weight: 300;
+}
+
+.coordinator-section {
+  margin: 3.5rem auto;
+  padding: 0;
+}
+
+.coordinator-section p {
+  margin: 0;
 }
 
 @media (min-width: 600px) {
@@ -458,21 +475,35 @@ section {
   
   section {
     max-width: 92vw;
-    margin: 1.5rem auto;
+    margin: 2rem auto;
     padding: 0.5rem;
   }
   
   .countdown-section {
     max-width: 92vw;
+    margin: 2rem auto;
   }
   
   .timeline-section {
     max-width: 92vw;
+    margin: 2rem auto;
   }
   
   .timeline {
     max-width: 92vw;
     min-width: 250px;
+  }
+  
+  .section-img {
+    margin: 2rem auto;
+  }
+  
+  .surprise-section {
+    margin: 2rem auto;
+  }
+  
+  .coordinator-section {
+    margin: 2rem auto;
   }
   
   .hero-content {
